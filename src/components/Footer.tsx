@@ -79,13 +79,8 @@ const Footer: FC<FooterProps> = ({ scrollToSection }) => {
   }, []);
 
   return (
-    <footer ref={sectionRef} className="relative py-16 overflow-hidden">
-      {/* 3D Background Elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="footer-bg-element absolute top-1/3 left-1/3 w-96 h-96 bg-[#6559FF] rounded-full blur-3xl opacity-20" />
-        <div className="footer-bg-element absolute bottom-1/3 right-1/3 w-96 h-96 bg-[#F45D01] rounded-full blur-3xl opacity-20" />
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent via-transparent to-black/20" />
-      </div>
+    <footer className="relative py-16 overflow-hidden">
+
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

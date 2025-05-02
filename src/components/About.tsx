@@ -3,11 +3,7 @@ import { FC } from 'react';
 const About: FC = () => {
   return (
     <section className="relative p-10">
-      {/* Background Elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-[#F45D01] rounded-full blur-2xl opacity-20 animate-float" />
-        <div className="absolute bottom-1/4 left-1/4 w-64 h-64 bg-[#6559FF] rounded-full blur-2xl opacity-20 animate-float-delayed" />
-      </div>
+ 
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

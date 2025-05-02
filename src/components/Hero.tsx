@@ -3,6 +3,7 @@ import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { SplitText } from 'gsap/SplitText';
 
+
 interface HeroProps {
   scrollToSection: (id: string) => void;
 }
@@ -16,13 +17,11 @@ const Hero: FC<HeroProps> = ({ scrollToSection }) => {
       gsap.context(() => {
       // Split text animation
       const split = SplitText.create(".split", { 
-        type: "words" 
+        type: "chars" 
       });
 
-
-      gsap.from(split.words, {
-        duration: 1,
-        rotate: "30%",
+      gsap.from(split.chars, {
+        duration: 0.5,
         y: -40,
         autoAlpha: 0,
         opacity: 0,
@@ -36,16 +35,11 @@ const Hero: FC<HeroProps> = ({ scrollToSection }) => {
 
   return (
     <div ref={sectionRef} className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0  overflow-hidden pointer-events-none">
-        <div className="bg-element absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#6559FF] rounded-full blur-3xl opacity-20" />
-        <div className="bg-element absolute top-1/3 left-1/3 w-64 h-64 bg-[#F45D01] rounded-full blur-2xl opacity-20" />
-        <div className="bg-element absolute bottom-1/3 right-1/3 w-64 h-64 bg-[#004777] rounded-full blur-2xl opacity-20" />
-      </div>
+
 
       {/* Content */}
       <div ref={contentRef} className="relative z-10 h-full w-full mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div className="h-full backdrop-blur-xl bg-white/5 rounded-3xl p-8 sm:p-12 shadow-2xl border border-white/10 transform-gpu  transition-transform duration-300">
+        <div className="h-full  bg-white/5 rounded-3xl p-8 sm:p-12  border border-white/10 transform-gpu transition-transform duration-300">
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 split2">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#F45D01] via-[#6559FF] to-[#004777] animate-gradient">
               Frontend Developer
@@ -55,7 +49,7 @@ const Hero: FC<HeroProps> = ({ scrollToSection }) => {
           <p className="text-xl sm:text-2xl text-white/80 mb-6 max-w-2xl mx-auto leading-relaxed split">
             Building modern, responsive, and interactive web applications with React, TypeScript, and Next.js
           </p>
-          <p className="text-lg text-white/70 mb-8 max-w-xl mx-auto leading-relaxed split">
+          <p className="text-lg text-white/70 mb-8 max-w-md mx-auto leading-relaxed split">
             Specializing in elegant UI/UX design, blazing-fast performance optimization, and creating intuitive, pixel-perfect user interfaces
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

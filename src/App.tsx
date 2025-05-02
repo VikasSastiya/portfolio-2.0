@@ -32,6 +32,7 @@ import { ScrollSmoother } from "gsap/ScrollSmoother";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { SplitText } from "gsap/SplitText";
 import { TextPlugin } from "gsap/TextPlugin";
+import ThreeScene from "./components/ThreeScene";
 
 gsap.registerPlugin(
   useGSAP,
@@ -94,7 +95,10 @@ const App: FC = () => {
   }, []);
 
   return (
-    <div id="smooth-wrapper" className="bg-[#71E7B8]">
+    <div id="smooth-wrapper" className="bg-[#5abf97] relative select-none">
+      <div className="absolute inset-0 w-full h-full">
+        <ThreeScene  />
+      </div>
       <div className="scroll-progress">
         <div
           className="scroll-progress-bar"
