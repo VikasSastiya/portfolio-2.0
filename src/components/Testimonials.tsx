@@ -9,24 +9,24 @@ const Testimonials: FC = () => {
 
   const testimonials = [
     {
-      name: 'Sarah Johnson',
-      role: 'Product Manager',
-      company: 'TechCorp',
-      image: 'https://randomuser.me/api/portraits/women/1.jpg',
+      name: 'MS. GEETA P SOLANKI',
+      role: 'CFO',
+      company: 'Glovtouch',
+      image: '/image/geeta.jpg',
       content: 'Working with this developer was an absolute pleasure. Their attention to detail and problem-solving skills helped us create a product that exceeded our expectations.',
     },
     {
-      name: 'Michael Chen',
-      role: 'CTO',
-      company: 'StartupX',
-      image: 'https://randomuser.me/api/portraits/men/1.jpg',
+      name: 'Panchal jaydip narendrabhai',
+      role: 'CEO',
+      company: 'Shree Jay Furniture',
+      image: '/image/jd.JPG',
       content: 'The technical expertise and innovative solutions provided were instrumental in our product\'s success. Highly recommended for any complex web development project.',
     },
     {
-      name: 'Emily Rodriguez',
-      role: 'UX Designer',
-      company: 'DesignHub',
-      image: 'https://randomuser.me/api/portraits/women/2.jpg',
+      name: 'MR. SUMIT L CHUDASAMA',
+      role: 'Co-Founder',
+      company: 'Glovtouch',
+      image: '/image/sumit.jpg',
       content: 'Collaborating on this project was seamless. Their understanding of modern web technologies and user experience principles made the development process smooth and efficient.',
     },
   ];
@@ -63,7 +63,7 @@ const Testimonials: FC = () => {
                   <img
                     src={testimonial.image}
                     alt={testimonial.name}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-top"
                   />
                 </div>
                 <div>

@@ -59,7 +59,7 @@ const Header: FC<HeaderProps> = ({ scrollToSection }) => {
   ];
 
   return (
-    <nav ref={headerRef} className="fixed top-0 left-0 right-0 z-50 backdrop-blur-lg bg-black/50">
+    <nav ref={headerRef} className="fixed top-0 left-0 right-0 z-50 backdrop-blur-lg bg-transparent">
       <div className="flex items-center justify-between px-10 py-4">
         {/* Logo */}
         <div className="flex items-center">

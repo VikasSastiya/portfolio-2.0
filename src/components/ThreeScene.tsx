@@ -65,7 +65,7 @@ const ParticleField: FC<{
     const time = state.clock.getElapsedTime();
     
     // Dynamic color transition with noise
-    const noise = Math.sin(time * 0.3) * 0.5 + 0.5;
+    const noise = Math.sin(time * 0.1) * 0.5 + 0.5;
     const colorValue = (Math.sin(time * 0.5) * 0.5 + 0.5) * noise;
     const newColor = new THREE.Color(baseColor).lerp(new THREE.Color(accentColor), colorValue);
     setColor('#' + newColor.getHexString());
@@ -128,6 +128,7 @@ const ParticleField: FC<{
   );
 };
 
+
 const ThreeScene: FC = () => {
   const [mounted, setMounted] = useState(false);
 
@@ -139,32 +140,36 @@ const ThreeScene: FC = () => {
 
   return (
     <div className="absolute inset-0 w-full h-full">
-      <Canvas camera={{ position: [0, 0, 8], fov: 75 }}>
-        <ambientLight intensity={0.5} />
+      <Canvas camera={{ position: [0, 0, 20], fov: 75 }}>
+        <ambientLight intensity={0.2} />
         <pointLight position={[10, 10, 10]} intensity={1} />
+        <pointLight position={[-10, -10, -10]} intensity={0.5} color="#004777" />
+     
+
+        {/* Particle Fields */}
         <ParticleField 
           baseColor="#6559FF" 
           accentColor="#F45D01"
-          size={0.09} 
-          count={500} 
+          size={0.1} 
+          count={300} 
           speed={0.03}
-          spread={12}
+          spread={20}
         />
         <ParticleField 
           baseColor="#F45D01" 
           accentColor="#004777"
-          size={0.09} 
+          size={0.1} 
           count={300} 
           speed={0.04}
-          spread={10}
+          spread={18}
         />
         <ParticleField 
           baseColor="#004777" 
           accentColor="#6559FF"
-          size={0.09} 
+          size={0.1} 
           count={400} 
           speed={0.035}
-          spread={14}
+          spread={22}
         />
       </Canvas>
     </div>

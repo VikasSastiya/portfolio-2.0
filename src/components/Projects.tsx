@@ -9,30 +9,29 @@ const Projects: FC = () => {
     {
       title: 'E-commerce Platform',
       description: 'A full-stack e-commerce platform built with Next.js, TypeScript, and MongoDB.',
-      image: 'https://images.unsplash.com/photo-1556741533-6e6a62bd8b49?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      image: '/image/Screenshot 2025-05-03 193837.png',
       tags: ['Next.js', 'TypeScript', 'MongoDB', 'Tailwind CSS'],
-      link: '#',
     },
     {
       title: '3D Product Viewer',
       description: 'Interactive 3D product visualization using Three.js and WebGL.',
-      image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1964&q=80',
+      image: '/image/Screenshot 2025-05-03 194121.png',
       tags: ['Three.js', 'WebGL', 'React', 'GSAP'],
-      link: '#',
+      link: 'https://amaya.godcraft.fun/',
     },
     {
       title: 'AI-Powered Dashboard',
       description: 'Real-time analytics dashboard with AI-powered insights and predictions.',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      image: '/image/ai.png',
       tags: ['React', 'Node.js', 'TensorFlow', 'D3.js'],
-      link: '#',
+      link: 'https://ai.godcraft.fun/',
     },
     {
-      title: 'Mobile App Backend',
-      description: 'Scalable backend infrastructure for a mobile application with real-time features.',
-      image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      tags: ['Node.js', 'MongoDB', 'WebSocket', 'Redis'],
-      link: '#',
+      title: 'Movie Website',
+      description: 'A modern movie streaming platform with personalized recommendations and user profiles.',
+      image: '/image/moviesapp.png',
+      tags: ['React', 'Node.js', 'MongoDB', 'Redux'],
+      link: 'https://movies.godcraft.fun/',
     },
   ];
 
@@ -86,6 +85,8 @@ const Projects: FC = () => {
                 </div>
                 <a
                   href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-white hover:text-[#F45D01] transition-colors duration-300"
                 >
                   <span>View Project</span>

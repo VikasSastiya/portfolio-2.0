@@ -40,11 +40,11 @@ const About: FC = () => {
 
           {/* Image/Illustration */}
           <div className="relative">
-            <div className="backdrop-blur-xl bg-white/5 rounded-3xl p-8 shadow-2xl border border-white/10">
+            <div className="backdrop-blur-sm bg-white/5 rounded-3xl p-8 shadow-2xl border border-white/10">
               <div className="aspect-square bg-gradient-to-br from-[#F45D01] to-[#6559FF] rounded-2xl opacity-20" />
               <img src="/1000068353-Picsart-AiImageEnhancer.jpg-Photoroom.png" alt="Profile" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-60 h-80 bg-transparent rounded-full shadow-lg" />
             </div>
-            <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-[#F45D01] rounded-full blur-xl opacity-20" />
+            {/* <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-[#F45D01] rounded-full blur-xl opacity-20" /> */}
           </div>
         </div>
       </div>

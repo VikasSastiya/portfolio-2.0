@@ -1,10 +1,39 @@
 import { FC, useRef } from 'react';
-
+import { useGSAP } from "@gsap/react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const Services: FC = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
 
+  useGSAP(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+
+    // Add hover animations
+    const cards = document.querySelectorAll(".service-card");
+    cards.forEach(card => {
+      card.addEventListener("mouseenter", () => {
+        gsap.to(card, {
+          scale: 1.02,
+          y: -5,
+          duration: 0.3,
+          ease: "power2.out"
+        });
+      });
+
+      card.addEventListener("mouseleave", () => {
+        gsap.to(card, {
+          scale: 1,
+          y: 0,
+          duration: 0.3,
+          ease: "power2.in"
+        });
+      });
+    });
+
+  }, []);
 
   const services = [
     {
@@ -57,16 +86,16 @@ const Services: FC = () => {
                   cardsRef.current[index] = el;
                 }
               }}
-              className="group backdrop-blur-xl bg-white/5 rounded-3xl p-8 shadow-2xl border border-white/10 hover:border-white/20 transition-all duration-300 hover:shadow-[#F45D01]/20"
+              className="service-card group backdrop-blur-sm bg-white/5 rounded-3xl p-8 shadow-2xl border border-white/10 hover:border-white/20 transition-all duration-300 hover:shadow-[#F45D01]/20 transform-gpu"
             >
               <div className="flex items-center gap-4 mb-6">
-                <div className="text-4xl">{service.icon}</div>
+                <div className="service-icon text-4xl">{service.icon}</div>
                 <h3 className="text-2xl font-semibold text-white">{service.title}</h3>
               </div>
               <p className="text-white/80 mb-6">{service.description}</p>
               <ul className="space-y-3">
                 {service.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-center gap-3 text-white/70">
+                  <li key={featureIndex} className="feature-item flex items-center gap-3 text-white/70">
                     <span className="w-2 h-2 rounded-full bg-[#F45D01]" />
                     {feature}
                   </li>

@@ -1,8 +1,7 @@
 import { FC, useRef } from 'react';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { SplitText } from 'gsap/SplitText';
-
+import TrueFocus from './TrueFocus';
 
 interface HeroProps {
   scrollToSection: (id: string) => void;
@@ -14,42 +13,35 @@ const Hero: FC<HeroProps> = ({ scrollToSection }) => {
   const scrollIndicatorRef = useRef<HTMLDivElement>(null);
 
   useGSAP(() => {
-      gsap.context(() => {
-      // Split text animation
-      const split = SplitText.create(".split", { 
-        type: "chars" 
-      });
-
-      gsap.from(split.chars, {
-        duration: 0.5,
-        y: -40,
-        autoAlpha: 0,
-        opacity: 0,
-        stagger: 0.05,
-        ease: "sine"
-      });
-
-      return () => split.revert();
+    gsap.context(() => {
+      // Add any GSAP animations here if needed
     }, sectionRef);
   }, []);
 
   return (
     <div ref={sectionRef} className="relative min-h-screen flex items-center justify-center overflow-hidden">
-
-
       {/* Content */}
       <div ref={contentRef} className="relative z-10 h-full w-full mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div className="h-full  bg-white/5 rounded-3xl p-8 sm:p-12  border border-white/10 transform-gpu transition-transform duration-300">
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 split2">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#F45D01] via-[#6559FF] to-[#004777] animate-gradient">
-              Frontend Developer
-            </span>
-          </h1>
-          <h2 className="text-2xl sm:text-3xl text-white/90 mb-4 split">Crafting Beautiful Digital Experiences</h2>
-          <p className="text-xl sm:text-2xl text-white/80 mb-6 max-w-2xl mx-auto leading-relaxed split">
+        <div className="h-full bg-white/5 rounded-3xl p-8 sm:p-12 border border-white/10 transform-gpu transition-transform duration-300">
+          <div className="mb-6">
+            <TrueFocus 
+              sentence="Frontend Developer"
+              manualMode={false}
+              blurAmount={7}
+              borderColor="#6559FF"
+              glowColor="rgba(101, 89, 255, 0.6)"
+              textGradient="bg-gradient-to-r from-[#F45D01] to-[#6559FF]"
+              animationDuration={1.5}
+              pauseBetweenAnimations={0.5}
+            />
+          </div>
+          <div className="mb-4">
+            <h1 className='text-2xl sm:text-3xl text-white/90 mb-4 font-black'>Crafting Beautiful Digital Experiences</h1>
+          </div>
+          <p className="text-xl sm:text-2xl text-white/80 mb-6 max-w-2xl mx-auto leading-relaxed">
             Building modern, responsive, and interactive web applications with React, TypeScript, and Next.js
           </p>
-          <p className="text-lg text-white/70 mb-8 max-w-md mx-auto leading-relaxed split">
+          <p className="text-lg text-white/70 mb-8 max-w-md mx-auto leading-relaxed">
             Specializing in elegant UI/UX design, blazing-fast performance optimization, and creating intuitive, pixel-perfect user interfaces
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

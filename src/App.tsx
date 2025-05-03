@@ -95,7 +95,7 @@ const App: FC = () => {
   }, []);
 
   return (
-    <div id="smooth-wrapper" className="bg-[#5abf97] relative select-none">
+    <div id="smooth-wrapper" className="bg-[#000000] relative select-none">
       <div className="absolute inset-0 w-full h-full">
         <ThreeScene  />
       </div>

@@ -27,7 +27,7 @@ const Contact: FC = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Contact Form */}
-          <div className="backdrop-blur-xl bg-white/5 rounded-3xl p-8 shadow-2xl border border-white/10">
+          <div className="backdrop-blur-sm bg-white/5 rounded-3xl p-8 shadow-2xl border border-white/10">
             <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
@@ -94,7 +94,7 @@ const Contact: FC = () => {
 
           {/* Contact Information */}
           <div className="space-y-8">
-            <div className="backdrop-blur-xl bg-white/5 rounded-3xl p-8 shadow-2xl border border-white/10">
+            <div className="backdrop-blur-sm bg-white/5 rounded-3xl p-8 shadow-2xl border border-white/10">
               <h3 className="text-2xl font-semibold text-white mb-6">Contact Information</h3>
               <div className="space-y-6">
                 <div className="flex items-center gap-4">
@@ -180,7 +180,7 @@ const Contact: FC = () => {
             </div>
 
             {/* Social Links */}
-            <div className="backdrop-blur-xl bg-white/5 rounded-3xl p-8 shadow-2xl border border-white/10">
+            <div className="backdrop-blur-sm bg-white/5 rounded-3xl p-8 shadow-2xl border border-white/10">
               <h3 className="text-2xl font-semibold text-white mb-6">Connect With Me</h3>
               <div className="flex gap-4">
                 <a
