@@ -10,7 +10,31 @@ const Services: FC = () => {
   useGSAP(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: "top 40%",
+        end: "+=100%",
+        scrub: 1,
+        // markers: true,
+      },
+    });
+    tl.from(".service-title", {
+      opacity: 0,
+      duration: 0.6,
+      ease: "power2.out",
+    });
+    tl.from(".service-description", {
+      opacity: 0,
+      duration: 0.6,
+      ease: "power2.out",
+    },"-=0.3");
+    tl.from(".service-cards ", {
+      opacity: 0,
+      duration: 0.6,
+      stagger: 0.2,
+      ease: "power2.out",
+    },"-=0.3");
     // Add hover animations
     const cards = document.querySelectorAll(".service-card");
     cards.forEach(card => {
@@ -67,26 +91,26 @@ const Services: FC = () => {
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-24">
-          <h2 className="text-5xl sm:text-6xl font-bold text-white mb-6">
+          <h2 className="text-5xl sm:text-6xl font-bold text-white mb-6 service-title">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#F45D01] to-[#6559FF]">
               Our Services
             </span>
           </h2>
-          <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed service-description">
             Comprehensive solutions tailored to meet your specific needs and business goals.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 service-cards">
           {services.map((service, index) => (
-            <div
+            <div 
               key={index}
               ref={(el) => {
                 if (el) {
                   cardsRef.current[index] = el;
                 }
               }}
-              className="service-card group backdrop-blur-sm bg-white/5 rounded-3xl p-8 shadow-2xl border border-white/10 hover:border-white/20 transition-all duration-300 hover:shadow-[#F45D01]/20 transform-gpu"
+              className="service-card-item group backdrop-blur-sm bg-white/5 rounded-3xl p-8 shadow-2xl border border-white/10 hover:border-white/20 transition-all duration-300 hover:shadow-[#F45D01]/20 transform-gpu"
             >
               <div className="flex items-center gap-4 mb-6">
                 <div className="service-icon text-4xl">{service.icon}</div>

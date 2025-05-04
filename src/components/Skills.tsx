@@ -49,28 +49,37 @@ const Skills: FC = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: skillsRef.current,
-        start: "top 80%",
-        end: "top 20%",
-        toggleActions: "play none none reverse",
-        markers: false
-      }
+        start: "top 40%",
+        end: "+=100%",
+        scrub: 2,
+        // markers: true,
+      },
+    });
+    tl.from(".skills-title", {
+      opacity: 0,
+      duration: 0.6,
+      ease: "power2.out",
+    });
+    tl.from(".skills-description", {
+      opacity: 0,
+      duration: 0.6,
+      ease: "power2.out",
     });
 
     // Animate cards
     tl.from(".group", {
       opacity: 0,
       y: 50,
-      duration: 0.3,
+      duration: 0.6,
       stagger: 0.2,
+      ease: "power2.out"
     });
-
-    // Animate progress bars
-    // tl.from(".progress-bar", {
-    //   width: 0,
-    //   duration: 0.2,
-    //   stagger: 0.1,
-    // }, "-=0.4"); // Start slightly before the previous animation ends
-
+    tl.from(".progress-bar", {
+      width: 0,
+      duration: 1.2,
+      stagger: 0.2,
+      ease: "power2.out",
+    },"-=0.2");
   }, []);
 
   return (
@@ -80,12 +89,12 @@ const Skills: FC = () => {
     >
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-24">
-          <h2 className="text-5xl sm:text-6xl font-bold text-white mb-6">
+          <h2 className="text-5xl sm:text-6xl font-bold text-white mb-6 skills-title">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#F45D01] to-[#6559FF]">
               My Skills
             </span>
           </h2>
-          <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed skills-description">
             A comprehensive overview of my technical expertise and proficiency
             levels across various technologies and tools.
           </p>

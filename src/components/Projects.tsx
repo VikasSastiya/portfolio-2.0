@@ -1,3 +1,6 @@
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { FC, useRef } from 'react';
 
 
@@ -34,7 +37,37 @@ const Projects: FC = () => {
       link: 'https://movies.godcraft.fun/',
     },
   ];
+   
+  useGSAP(() => {
+    gsap.registerPlugin(ScrollTrigger);
 
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: "top 40%",
+        end: "+=100%",
+        scrub: 1,
+        markers: true,
+      },
+    });
+    tl.from(".project-title", {
+      opacity: 0,
+      duration: 0.6,
+      ease: "power2.out",
+    });
+    tl.from(".project-description", {
+      opacity: 0,
+      duration: 0.6,
+      ease: "power2.out",
+    });
+    tl.from(".project-cards", {
+      opacity: 0,
+      duration: 0.6,
+      ease: "power2.out",
+    }); 
+  }, []);
+    
+  
   return (
     <section ref={sectionRef} className="relative py-32 overflow-hidden">
 

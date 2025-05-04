@@ -114,7 +114,7 @@ const App: FC = () => {
           <Hero scrollToSection={scrollToSection} />
         </div>
         <div id="about" className="relative">
-          <About />
+          <About scrollToSection={scrollToSection} />
         </div>
         <div id="skills" className="relative">
           <Skills />
