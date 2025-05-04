@@ -95,20 +95,20 @@ const App: FC = () => {
   }, []);
 
   return (
-    <div id="smooth-wrapper" className="bg-[#000000] relative select-none">
+    <div id="smooth-wrapper" className="bg-[#000000] relative select-none overflow-x-hidden">
       <div className="absolute inset-0 w-full h-full">
-        <ThreeScene  />
+        <ThreeScene />
       </div>
-      <div className="scroll-progress">
+      <div className="scroll-progress fixed top-0 left-0 right-0 h-1 z-50">
         <div
-          className="scroll-progress-bar"
+          className="scroll-progress-bar h-full transition-all duration-300"
           style={{
             width: `${scrollProgress * 100}%`,
             backgroundColor: isScrolling ? "#F45D01" : "#6559FF",
           }}
         />
       </div>
-      <div id="smooth-content">
+      <div id="smooth-content" className="relative">
         <div id="hero" className="relative">
           <Header scrollToSection={scrollToSection} />
           <Hero scrollToSection={scrollToSection} />
