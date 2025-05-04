@@ -44,10 +44,10 @@ const Projects: FC = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: sectionRef.current,
-        start: "top 40%",
+        start: "top 50%",
         end: "+=100%",
         scrub: 1,
-        markers: true,
+        // markers: true,
       },
     });
     tl.from(".project-title", {
@@ -62,6 +62,8 @@ const Projects: FC = () => {
     });
     tl.from(".project-cards", {
       opacity: 0,
+      scale: 0.1,
+      stagger: 0.2,
       duration: 0.6,
       ease: "power2.out",
     }); 
@@ -75,25 +77,25 @@ const Projects: FC = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-24">
           <h2 className="text-5xl sm:text-6xl font-bold text-white mb-6">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#F45D01] to-[#6559FF]">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#F45D01] to-[#6559FF] project-title">
               Featured Projects
             </span>
           </h2>
-          <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed font-semibold font-mono project-description">
             A showcase of our most impactful and innovative projects.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 ">
           {projects.map((project, index) => (
-            <div
+            <section
               key={index}
-              ref={(el) => {
+              ref={(el: HTMLDivElement | null) => {
                 if (el) {
                   cardsRef.current[index] = el;
                 }
               }}
-              className="group backdrop-blur-xl bg-white/5 rounded-3xl overflow-hidden shadow-2xl border border-white/10 hover:border-white/20 transition-all duration-300 hover:shadow-[#F45D01]/20"
+              className="group backdrop-blur-xl bg-white/5 rounded-3xl overflow-hidden shadow-2xl border border-white/10 hover:border-white/20 transition-all duration-300 hover:shadow-[#F45D01]/20 project-cards"
             >
               <div className="relative h-64 overflow-hidden">
                 <img
@@ -138,7 +140,7 @@ const Projects: FC = () => {
                   </svg>
                 </a>
               </div>
-            </div>
+            </section>
           ))}
         </div>
       </div>

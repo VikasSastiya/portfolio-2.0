@@ -125,9 +125,9 @@ const App: FC = () => {
         <div id="projects" className="relative">
           <Projects />
         </div>
-        <div id="testimonials" className="relative">
+        {/* <div id="testimonials" className="relative">
           <Testimonials />
-        </div>
+        </div> */}
         <div id="contact" className="relative">
           <Contact />
         </div>

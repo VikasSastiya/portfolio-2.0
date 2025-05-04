@@ -42,8 +42,8 @@ const Hero: FC<HeroProps> = ({ scrollToSection }) => {
     <div ref={heroRef} className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Content */}
       <div className="relative z-10 h-full w-full mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div className="hero-content h-full bg-white/5 rounded-3xl p-8 sm:p-12 border border-white/10 transform-gpu transition-transform duration-300">
-          <div className="mb-6">
+        <div className=" h-full bg-white/5 rounded-3xl p-8 sm:p-12 border border-white/10 transform-gpu transition-transform duration-300">
+          <div className="mb-6 hero-content">
             <TrueFocus 
               sentence="Frontend Developer"
               manualMode={false}
@@ -55,13 +55,13 @@ const Hero: FC<HeroProps> = ({ scrollToSection }) => {
               pauseBetweenAnimations={0.5}
             />
           </div>
-          <div className="mb-4">
+          <div className="mb-4 hero-content">
             <h1 className='text-2xl sm:text-3xl text-white/90 mb-4 font-black'>Crafting Beautiful Digital Experiences</h1>
           </div>
-          <p className="text-xl sm:text-2xl text-white/80 mb-6 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xl sm:text-2xl text-white/80 mb-6 max-w-2xl mx-auto leading-relaxed hero-content">
             Building modern, responsive, and interactive web applications with React, TypeScript, and Next.js
           </p>
-          <p className="text-lg text-white/70 mb-8 max-w-md mx-auto leading-relaxed">
+          <p className="text-lg text-white/70 mb-8 max-w-md mx-auto leading-relaxed hero-content">
             Specializing in elegant UI/UX design, blazing-fast performance optimization, and creating intuitive, pixel-perfect user interfaces
           </p>
           <div className="hero-buttons flex flex-col sm:flex-row gap-4 justify-center">

@@ -16,7 +16,7 @@ const Services: FC = () => {
         start: "top 40%",
         end: "+=100%",
         scrub: 1,
-        // markers: true,
+        //markers: true,
       },
     });
     tl.from(".service-title", {

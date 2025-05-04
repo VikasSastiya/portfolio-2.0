@@ -1,5 +1,6 @@
-import { FC, useState, useEffect, useRef } from 'react';
+import { FC, useState, useRef } from 'react';
 import { gsap } from 'gsap';
+import { useGSAP } from '@gsap/react';
 
 interface HeaderProps {
   scrollToSection: (id: string) => void;
@@ -10,7 +11,7 @@ const Header: FC<HeaderProps> = ({ scrollToSection }) => {
   const headerRef = useRef<HTMLElement>(null);
   const menuRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
+  useGSAP(() => {
     // Animate header on scroll
     let prevScrollPos = window.scrollY;
     const handleScroll = () => {
@@ -38,7 +39,7 @@ const Header: FC<HeaderProps> = ({ scrollToSection }) => {
   }, []);
 
   // Handle mobile menu animations
-  useEffect(() => {
+  useGSAP(() => {
     if (menuRef.current) {
       if (isMobileMenuOpen) {
         gsap.fromTo(menuRef.current,

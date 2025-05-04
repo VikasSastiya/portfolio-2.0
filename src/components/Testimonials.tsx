@@ -1,3 +1,6 @@
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/all';
 import { FC, useRef } from 'react';
 
 
@@ -30,6 +33,37 @@ const Testimonials: FC = () => {
       content: 'Collaborating on this project was seamless. Their understanding of modern web technologies and user experience principles made the development process smooth and efficient.',
     },
   ];
+  
+  useGSAP(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: "top 60%",
+        end: "+=100%",
+        scrub: 1,
+        markers: true,
+      },
+    });
+    tl.from(".testimonials-title", {
+      opacity: 0,
+      duration: 0.6,
+      ease: "power2.out",
+    });
+    tl.from(".testimonials-description", {
+      opacity: 0,
+      duration: 0.6,
+      ease: "power2.out",
+    });
+    tl.from(".testimonials-cards", {
+      opacity: 0,
+      scale: 0.1,
+      stagger: 0.2,
+      duration: 0.6,
+      ease: "power2.out",
+    });
+  }, []);
 
   return (
     <section ref={sectionRef} className="relative py-32 overflow-hidden">
@@ -37,12 +71,12 @@ const Testimonials: FC = () => {
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-24">
-          <h2 className="text-5xl sm:text-6xl font-bold text-white mb-6">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#F45D01] to-[#6559FF]">
+          <h2 className="text-5xl sm:text-6xl font-bold text-white mb-6 testimonials-title">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r  from-[#F45D01] to-[#6559FF]">
               Client Testimonials
             </span>
           </h2>
-          <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed testimonials-description">
             Hear what our clients have to say about their experience working with us.
           </p>
         </div>
@@ -56,7 +90,7 @@ const Testimonials: FC = () => {
                   cardsRef.current[index] = el;
                 }
               }}
-              className="group backdrop-blur-xl bg-white/5 rounded-3xl p-8 shadow-2xl border border-white/10 hover:border-white/20 transition-all duration-300 hover:shadow-[#F45D01]/20"
+              className="group testimonials-cards backdrop-blur-xl bg-white/5 rounded-3xl p-8 shadow-2xl border border-white/10 hover:border-white/20 transition-all duration-300 hover:shadow-[#F45D01]/20"
             >
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-16 h-16 rounded-full overflow-hidden">

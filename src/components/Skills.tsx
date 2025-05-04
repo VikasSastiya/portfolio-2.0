@@ -67,7 +67,7 @@ const Skills: FC = () => {
     });
 
     // Animate cards
-    tl.from(".group", {
+    tl.from(".group-skills", {
       opacity: 0,
       y: 50,
       duration: 0.6,
@@ -104,7 +104,7 @@ const Skills: FC = () => {
           {skills.map((category, index) => (
             <div
               key={index}
-              className="group backdrop-blur-xl bg-white/5 rounded-3xl p-10 shadow-2xl border border-white/10 hover:border-white/20 transition-all duration-300 hover:shadow-[#F45D01]/20"
+              className="group-skills backdrop-blur-xl bg-white/5 rounded-3xl p-10 shadow-2xl border border-white/10 hover:border-white/20 transition-all duration-300 hover:shadow-[#F45D01]/20"
             >
               <div className="flex items-center gap-4 mb-8">
                 <h3 className="text-3xl font-semibold text-white">
