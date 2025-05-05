@@ -29,7 +29,7 @@ const Services: FC = () => {
       duration: 0.6,
       ease: "power2.out",
     },"-=0.3");
-    tl.from(".service-cards ", {
+    tl.from(".service-cards .service-card-item", {
       opacity: 0,
       duration: 0.6,
       stagger: 0.2,
