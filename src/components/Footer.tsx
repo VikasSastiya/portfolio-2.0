@@ -8,7 +8,6 @@ interface FooterProps {
 
 const Footer: FC<FooterProps> = ({ scrollToSection }) => {
   const currentYear = new Date().getFullYear();
-  const sectionRef = useRef<HTMLElement>(null);
   const elementsRef = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
