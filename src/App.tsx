@@ -6,7 +6,6 @@ import About from "./components/About";
 import Skills from "./components/Skills";
 import Services from "./components/Services";
 import Projects from "./components/Projects";
-import Testimonials from "./components/Testimonials";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import { gsap } from "gsap";
@@ -125,9 +124,6 @@ const App: FC = () => {
         <div id="projects" className="relative">
           <Projects />
         </div>
-        {/* <div id="testimonials" className="relative">
-          <Testimonials />
-        </div> */}
         <div id="contact" className="relative">
           <Contact />
         </div>
