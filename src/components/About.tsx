@@ -151,7 +151,7 @@ const About: FC<AboutProps> = ({ scrollToSection }) => {
               </span>
             </h2>
             <div ref={textRef} className="text-base text-center sm:text-lg lg:text-xl text-white/80 leading-relaxed about-content-left-text responsive-text">
-              I'm a passionate developer with a keen eye for design and a love for creating beautiful, functional digital experiences. With expertise in modern web technologies and a focus on user-centered design, I bring ideas to life through code.
+              I'm Kenil Sangani, a passionate developer with a keen eye for design and a love for creating beautiful, functional digital experiences. With expertise in modern web technologies and a focus on user-centered design, I bring ideas to life through code.
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="backdrop-blur-sm bg-white/5 rounded-xl p-4 border border-white/10">
