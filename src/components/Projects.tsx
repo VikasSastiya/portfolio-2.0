@@ -14,6 +14,7 @@ const Projects: FC = () => {
       description: 'A full-stack e-commerce platform built with Next.js, TypeScript, and MongoDB.',
       image: '/image/Screenshot 2025-05-03 193837.png',
       tags: ['Next.js', 'TypeScript', 'MongoDB', 'Tailwind CSS'],
+      link: 'https://whitezone.vercel.app/',
       github: 'https://github.com/kenilGamer/whitezone',
     },    
     {
