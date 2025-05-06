@@ -145,7 +145,7 @@ const Contact: FC = () => {
                       href="tel:+1234567890"
                       className="text-white hover:text-[#6559FF] transition-colors"
                     >
-                      +1 (234) 567-890
+                      +91 7383740131
                     </a>
                   </div>
                 </div>
@@ -173,7 +173,7 @@ const Contact: FC = () => {
                   </div>
                   <div>
                     <p className="text-white/70">Location</p>
-                    <p className="text-white">San Francisco, CA</p>
+                    <p className="text-white">Rajkot, Gujarat, India</p>
                   </div>
                 </div>
               </div>
@@ -200,7 +200,7 @@ const Contact: FC = () => {
                   </svg>
                 </a>
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/in/kenil-sangani/"
                   className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#F45D01] transition-colors"
                 >
                   <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
