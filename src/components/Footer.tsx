@@ -207,10 +207,10 @@ const Footer: FC<FooterProps> = ({ scrollToSection }) => {
                   />
                 </svg>
                 <a
-                  href="mailto:contact@example.com"
+                  href="mailto:kenilk667@gmail.com"
                   className="text-white/70 hover:text-[#F45D01] transition-colors transform-gpu hover:translate-x-2"
                 >
-                  contact@example.com
+                  kenilk667@gmail.com
                 </a>
               </li>
               <li className="flex items-center gap-3">
@@ -231,7 +231,7 @@ const Footer: FC<FooterProps> = ({ scrollToSection }) => {
                   href="tel:+1234567890"
                   className="text-white/70 hover:text-[#6559FF] transition-colors transform-gpu hover:translate-x-2"
                 >
-                  +1 (234) 567-890
+                  +91 7383740131
                 </a>
               </li>
               <li className="flex items-center gap-3">
@@ -254,7 +254,7 @@ const Footer: FC<FooterProps> = ({ scrollToSection }) => {
                     d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                   />
                 </svg>
-                <span className="text-white/70 transform-gpu hover:translate-x-2">San Francisco, CA</span>
+                <span className="text-white/70 transform-gpu hover:translate-x-2">Rajkot, Gujarat</span>
               </li>
             </ul>
           </div>

@@ -116,10 +116,10 @@ const Contact: FC = () => {
                   <div>
                     <p className="text-white/70">Email</p>
                     <a
-                      href="mailto:contact@example.com"
+                      href="mailto:kenilk667@gmail.com"
                       className="text-white hover:text-[#F45D01] transition-colors"
                     >
-                      contact@example.com
+                      kenilk667@gmail.com
                     </a>
                   </div>
                 </div>
@@ -184,7 +184,7 @@ const Contact: FC = () => {
               <h3 className="text-2xl font-semibold text-white mb-6">Connect With Me</h3>
               <div className="flex gap-4">
                 <a
-                  href="#"
+                  href="https://github.com/kenilgamer"
                   className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#F45D01] transition-colors"
                 >
                   <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
