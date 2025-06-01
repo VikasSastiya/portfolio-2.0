@@ -1,17 +1,34 @@
 import { FC, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 const Contact: FC = () => {
-  const sectionRef = useRef<HTMLElement>(null);
   const formRef = useRef<HTMLFormElement>(null);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted');
+
+    emailjs
+      .sendForm(
+        'service_ffce6e5',
+        'template_5u31fvp',
+        formRef.current!,
+        {
+          publicKey: 'ugCBbxaJsWvscldSi',
+        }
+      )
+      .then(
+        () => {
+          console.log('SUCCESS!');
+          formRef.current?.reset();
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        }
+      );
   };
 
   return (
-    <section ref={sectionRef} className="relative py-32 overflow-hidden">
+    <section className="relative py-32 overflow-hidden">
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-24">
@@ -37,7 +54,7 @@ const Contact: FC = () => {
                   <input
                     type="text"
                     id="name"
-                    name="name"
+                    name="user_name"
                     className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder-white/50 focus:outline-none focus:border-[#F45D01] transition-colors"
                     placeholder="Your name"
                     required
@@ -50,7 +67,7 @@ const Contact: FC = () => {
                   <input
                     type="email"
                     id="email"
-                    name="email"
+                    name="user_email"
                     className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder-white/50 focus:outline-none focus:border-[#F45D01] transition-colors"
                     placeholder="your@email.com"
                     required
