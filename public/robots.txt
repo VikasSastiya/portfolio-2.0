@@ -1,0 +1,6 @@
+# Allow all crawlers access to everything
+User-agent: *
+Disallow:
+
+# Sitemap (update the URL if you have a sitemap)
+Sitemap: https://portfolio.godcraft.fun/sitemap.xml 
