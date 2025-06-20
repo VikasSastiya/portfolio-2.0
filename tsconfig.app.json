@@ -24,3 +24,74 @@
   },
   "include": ["src"]
 }
+
+
+/*
+🔧 Top-Level
+
+Field	Description	URL
+
+compilerOptions	Main configuration section	https://www.typescriptlang.org/tsconfig#compilerOptions
+include	Specifies which files to include	https://www.typescriptlang.org/tsconfig#include
+
+
+
+---
+
+⚙️ compilerOptions Fields (in your config)
+
+📁 Output & Build
+
+Field	URL
+
+tsBuildInfoFile	https://www.typescriptlang.org/tsconfig#tsBuildInfoFile
+noEmit	https://www.typescriptlang.org/tsconfig#noEmit
+
+
+📦 Module & Resolution
+
+Field	URL
+
+module	https://www.typescriptlang.org/tsconfig#module
+moduleResolution	https://www.typescriptlang.org/tsconfig#moduleResolution
+allowImportingTsExtensions	https://www.typescriptlang.org/tsconfig#allowImportingTsExtensions
+isolatedModules	https://www.typescriptlang.org/tsconfig#isolatedModules
+moduleDetection	https://www.typescriptlang.org/tsconfig#moduleDetection
+
+
+⚛️ JSX / React
+
+Field	URL
+
+jsx	https://www.typescriptlang.org/tsconfig#jsx
+
+
+🎯 Target & Environment
+
+Field	URL
+
+target	https://www.typescriptlang.org/tsconfig#target
+lib	https://www.typescriptlang.org/tsconfig#lib
+
+
+📏 Linting / Strictness
+
+Field	URL
+
+strict	https://www.typescriptlang.org/tsconfig#strict
+noUnusedLocals	https://www.typescriptlang.org/tsconfig#noUnusedLocals
+
+noUnusedParameters	https://www.typescriptlang.org/tsconfig#noUnusedParameters
+noFallthroughCasesInSwitch	https://www.typescriptlang.org/tsconfig#noFallthroughCasesInSwitch
+noUncheckedSideEffectImports	https://www.typescriptlang.org/tsconfig#noUncheckedSideEffectImports
+
+
+🛑 Other
+
+Field	URL
+
+skipLibCheck	https://www.typescriptlang.org/tsconfig#skipLibCheck
+useDefineForClassFields	https://www.typescriptlang.org/tsconfig#useDefineForClassFields
+
+
+ */
