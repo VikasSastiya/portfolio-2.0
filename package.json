@@ -46,3 +46,52 @@
     "vite": "^6.3.1"
   }
 }
+
+/*
+📦 Dependencies
+
+https://www.emailjs.com – @emailjs/browser
+
+https://gsap.com – gsap, @gsap/react
+
+https://github.com/pmndrs/drei – @react-three/drei
+
+https://github.com/pmndrs/react-three-fiber – @react-three/fiber
+
+https://threejs.org – three
+
+https://tailwindcss.com – tailwindcss, @tailwindcss/postcss
+
+https://postcss.org – postcss
+
+https://github.com/liabru/matter-js – matter-js
+
+https://reactcommunity.org/react-transition-group/ – react-transition-group
+
+https://www.framer.com/motion/ – framer-motion
+
+https://locomotivemtl.github.io/locomotive-scroll/ – locomotive-scroll
+
+https://reactjs.org – react, react-dom
+
+https://sharp.pixelplumbing.com – sharp
+
+
+
+---
+
+🛠 Dev Dependencies
+
+https://eslint.org – eslint, @eslint/js, eslint-plugin-react-hooks, eslint-plugin-react-refresh
+
+https://github.com/sindresorhus/globals – globals
+
+https://rollup-plugin-visualizer.vercel.app – rollup-plugin-visualizer
+
+https://www.typescriptlang.org – typescript
+
+https://typescript-eslint.io – typescript-eslint
+
+https://vitejs.dev – vite, @vitejs/plugin-react
+
+*/
